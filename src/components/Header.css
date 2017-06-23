@@ -1,0 +1,22 @@
+.Nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 100px;
+}
+
+.Nav .title{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.Nav .list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 300px;
+}
+
+.Nav .list .current{
+    color: #f86400;
+}

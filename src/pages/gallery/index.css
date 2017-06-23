@@ -1,0 +1,20 @@
+.P-gallery .up-btn{
+    margin-right: 10px;
+}
+
+.P-gallery .gl-list{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.P-gallery .gl-item{
+    margin-right: 10px;
+    width: 150px;
+}
+
+
+.P-gallery .gl-item img{
+    width: 100%;
+    height: 150px;
+}
