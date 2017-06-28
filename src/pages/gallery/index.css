@@ -2,6 +2,10 @@
     margin-right: 10px;
 }
 
+.P-gallery .up-file{
+    display: none;
+}
+
 .P-gallery .gl-list{
     margin-top: 20px;
     display: flex;
@@ -17,4 +21,8 @@
 .P-gallery .gl-item img{
     width: 100%;
     height: 150px;
+}
+
+.P-gallery .preview{
+    max-width: 300px;
 }
