@@ -12,6 +12,7 @@ const BUCKET =  'dr';
 
 class Upload extends Component {
 
+
     getSignature( fileName = '' ) {
         let random = Math.floor( Math.random() * 10E8 );
         let time = parseInt( new Date().getTime() / 1000, 10 );
@@ -24,21 +25,10 @@ class Upload extends Component {
     }
 
     getImages() {
-        let authKey = this.getSignature();
-        let myHeaders = new Headers();
-        myHeaders.append('Host', HOST);
-        myHeaders.append('Authorization', authKey);
+        return;
+        // let authKey = this.getSignature();
+        // let url = `http://${HOST}/files/v2/${APP_ID}/${BUCKET}/?op=list&num=30`;
 
-        console.log( authKey );
-        // let authKey = 'authorization: esvlre2Kjh90Cr6LgMxfHeiQ575hPTEyNTM1MDY0NzQmYj1kciZrPUFLSURRangwdmZ6SHVNYmhiT3pzYjhJTEk0ZjRHSkRycmJqcCZlPTE0OTg2NTEzNzguNDIzJnQ9MTQ5ODY0NDE3OC40MjMmcj0yNzc1ODY0NzYmZj0=';
-        fetch(`http://api1.fun.tv/api/get_message?isajax=1&dtime=1498648318985`, {
-            method: 'GET',
-            headers: myHeaders
-        }).then( res => {
-            return res.json();
-        }).then( json => {
-            console.log('文件列表--->', json);
-        });
     }
 
     uploadImage(obj) {

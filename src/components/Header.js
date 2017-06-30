@@ -1,19 +1,51 @@
 import React, { Component } from 'react';
+import {Route, Link} from 'react-router-dom';
 import './Header.css';
 
 class Header extends Component {
+	constructor(props){
+        super( props );
+    }
 
 	render() {
+		console.log( this );
+		const navs = [
+			{
+				'path' : '/',
+				'name' : '首页'
+			},
+			// {
+			// 	'path' : '/Gallery',
+			// 	'name' : '动态'
+			// },
+			{
+				'path' : '/Gallery',
+				'name' : '相册'
+			},
+			// {
+			// 	'path' : '/Gallery',
+			// 	'name' : '文章'
+			// },
+			// {
+			// 	'path' : '/Gallery',
+			// 	'name' : '问答'
+			// },
+			// {
+			// 	'path' : '/Gallery',
+			// 	'name' : '图鉴'
+			// },
+		];
+
+		const navJSX = navs.map( obj => 
+			<li key={obj.path}><Link className="current" to={obj.path}>{obj.name}</Link></li>
+		);
+
 		return (
 			<header className="Nav">
 				<h1 className="title">多肉记</h1>
 				<nav>
 					<ul className="list">
-						<li><a href="###">动态</a></li>
-						<li><a href="###">文章</a></li>
-						<li><a className="current" href="###">相册</a></li>
-						<li><a href="###">问答</a></li>
-						<li><a href="###">图鉴</a></li>
+						{navJSX}
 					</ul>
 				</nav>
 			</header>

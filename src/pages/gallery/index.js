@@ -13,6 +13,7 @@ class Gallery extends Component {
     }
 
 	render() {
+        console.log( this );
 		return (
             <div className="P-gallery">   
                 <div>
