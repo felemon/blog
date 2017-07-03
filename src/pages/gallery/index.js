@@ -36,7 +36,6 @@ class Gallery extends Component {
 	}
 
     triggerUpload() {
-        console.log('triggerUpload');
         return new Upload().getImages();
         this.refs.upload.click();
 

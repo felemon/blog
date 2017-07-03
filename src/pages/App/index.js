@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 
-class Gallery extends Component {
+class App extends Component {
 
 	render() {
-		console.log( this );
 		return (
 			<h1>欢迎来到首页</h1>
 		);
 	}
 }
 
-export default Gallery;
+export default App;
