@@ -12,7 +12,7 @@ class Header extends Component {
 			{
 				'path' : '/',
 				'name' : '首页',
-				'active': 'true'
+				'active': true
 			},
 			// {
 			// 	'path' : '/Gallery',
@@ -37,8 +37,8 @@ class Header extends Component {
 		];
 
 		const navJSX = navs.map( obj => {
-			return <Route path={obj.path} exact={obj.active} children={ ({match}) => (
-				<li key={obj.path}><Link className={match ? "current" : ""} to={obj.path}>{obj.name}</Link></li>
+			return <Route key={obj.path} path={obj.path} exact={obj.active} children={ ({match}) => (
+				<li><Link className={match ? "current" : ""} to={obj.path}>{obj.name}</Link></li>
 				)}/>
 		});
 
