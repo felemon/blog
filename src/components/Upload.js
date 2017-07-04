@@ -38,9 +38,10 @@ class Upload extends Component {
         let fileName = 'abcd.jpg';
         let authKey = this.getSignature();
 
-        let form = new FormData();
-        form.append('op', 'upload');
-        form.append('filecontent', obj.data);
+        let body = {
+            'op': 'upload',
+            'filecontent': '',
+        }
         // form.append('biz_attr', ['w=' + width, 'h=' + height].join('&'));
 
         fetch(`http://${HOST}/files/v2/${APP_ID}/${BUCKET}/${fileName}`, {
@@ -49,15 +50,12 @@ class Upload extends Component {
                 'Host': HOST,
                 'Authorization': authKey
             },
-            body: form
+            body: JSON.stringify(body)
         }).then( res => {
             return res.json();
         }).then( json => {
             console.log('文件上传结果--->', json);
         });
-    }
-	render() {
-		return null;
     }
 }
 
