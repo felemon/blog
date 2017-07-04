@@ -1,7 +1,9 @@
-import express from 'express';
-import file from './file';
+'use strict';
 
-const router = express.Router();
+var express = require('express');
+var file = require('./file');
+
+var router = express.Router();
 
 router.use( function timeLog(req, res, next){
     console.log( 'Time:', Date.now() , req.originalUrl );

@@ -26,7 +26,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "server": "babel-node src/server.js & supervisor babel-node src/server.js",
+    "server": "babel-node src/server.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   }

@@ -1,6 +1,9 @@
-import CryptoJS, {HmacSHA1} from 'crypto-js';
-import FormData from 'form-data';
-import request from 'request';
+'use strict';
+
+var CryptoJS = require('crypto-js');
+var HmacSHA1 = CryptoJS.HmacSHA1;
+var FormData = require('form-data');
+var request = require('request');
 
 const express = require('express');
 
@@ -13,8 +16,8 @@ const BUCKET =  'duorouji';
 /////////////////////////////
 
 
-let file = {
-    getSignature( fileName = '' ) {
+var file = {
+    getSignature( fileName ) {
         let random = Math.floor( Math.random() * 10E9 );
         let time = new Date() / 1000;
         let expireTime = fileName ? 0 : 7200 + time;
